@@ -1,11 +1,12 @@
-package ar.edu.unju.fi.main;
+package ar.edu.unju.fi.ejercicio1.main;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
-import ar.edu.unju.fi.model.Producto;
-import ar.edu.unju.fi.model.Producto.Categoria;
-import ar.edu.unju.fi.model.Producto.OrigenFabricacion;
+
+import ar.edu.unju.fi.ejercicio1.model.Producto;
+import ar.edu.unju.fi.ejercicio1.model.Producto.Categoria;
+import ar.edu.unju.fi.ejercicio1.model.Producto.OrigenFabricacion;
 
 
 public class Main {
