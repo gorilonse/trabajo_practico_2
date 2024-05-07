@@ -136,7 +136,6 @@ public class Main {
 				System.out.println("Eliga una opción correcta");
 			}
 		}while(opcion!=3);
-		
 	}
 	
 	private static void cargarProductos(DataBase database) {
@@ -155,6 +154,7 @@ public class Main {
 		database.agregarObjeto(new Producto("13", "teclado", 600, OrigenFabricacion.URUGUAY, Categoria.INFORMATICA, true));
 		database.agregarObjeto(new Producto("14", "telefono", 2000, OrigenFabricacion.URUGUAY, Categoria.TELEFONIA, false));
 		database.agregarObjeto(new Producto("15", "cargador", 500, OrigenFabricacion.URUGUAY, Categoria.TELEFONIA, true));
+		System.out.println();
 	}
 
 }
