@@ -107,11 +107,45 @@ public class Main {
 				System.out.println("Modificando posicion del Jugador");
 				System.out.println("Identificar Jugador a modificar por el Apellido: ");
 				String auxApellido=sc.next();
+				System.out.println("Ahora Ingrese el Nombre");
+				String auxNombreString=sc.next();
+				int auxPosicion=0;
+				for (int i = 0; i < jugadores.getListaJugadores().size(); i++) {
+					if (jugadores.getListaJugadores().get(i).getApellido().equals(auxApellido) && jugadores.getListaJugadores().get(i).getNombre().equals(auxNombreString)) {
+						System.out.println("Elegir la nueva posicion: ");
+						System.out.println("1-Delantero");
+						System.out.println("2-Medio");
+						System.out.println("3-Defensa");
+						System.out.println("4-Arquero");
+						try {
+							auxPosicion=sc.nextInt();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							System.out.println("solo se puede elegir entre 1 y 4");
+						}
+						switch (auxPosicion) {
+						case 1: jugadores.getListaJugadores().get(i).setPosicioncilla(posicion.DELANTERO);//reasigno el valor DELANTERO esto para cuando es CLASE ENUM. 
+							break;
+						case 2: jugadores.getListaJugadores().get(i).setPosicioncilla(posicion.MEDIO);
+							break;
+						case 3: jugadores.getListaJugadores().get(i).setPosicioncilla(posicion.DEFENSA);
+							break;
+						case 4: jugadores.getListaJugadores().get(i).setPosicioncilla(posicion.ARQUERO);
+							break;
+						default: System.out.println("No se reasigno ninguna Posicion nueva");
+							break;
+						}
+						
+					} else {
+						System.out.println("No se encontro al Jugador con ese Apellido y Nombre...");
+					}
+				}
 				
 			}break;
 			
 			case 4: {
-				Iterator<Jugador> iterator = jugadores.getListaJugadores().iterator();
+				Iterator<Jugador> iterator = jugadores.getListaJugadores().iterator();  //ITERATOR
 				try {
 					System.out.println("Ingrese el nombre del jugador a eliminar");
 					nombre=sc.next();
